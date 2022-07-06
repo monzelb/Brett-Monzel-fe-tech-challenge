@@ -9,8 +9,8 @@ export enum PreapprovalStatus {
 
 export const repository: {member: IMemberDto, preapprovals: (IPreapprovalOfferDto & { status: PreapprovalStatus })[]}[] = [{
     member: {
-        firstName: "Billy",
-        lastName: "Bob",
+        firstName: "Successful",
+        lastName: "Capybara",
         dateOfBirth: new Date(1990, 1, 28),
         ssn: "123-45-6789",
         id: 1,
@@ -30,8 +30,8 @@ export const repository: {member: IMemberDto, preapprovals: (IPreapprovalOfferDt
     }]
 }, {
     member: {
-        firstName: "Jane",
-        lastName: "Wellington",
+        firstName: "Irritating",
+        lastName: "Jackrabbit",
         dateOfBirth: new Date(1986, 4, 12),
         ssn: "987-65-4321",
         id: 2,
@@ -39,9 +39,9 @@ export const repository: {member: IMemberDto, preapprovals: (IPreapprovalOfferDt
     preapprovals: []
 }, {
     member: {
-        firstName: "Bruce",
-        lastName: "Habernathy",
-        dateOfBirth: new Date(1986, 4, 12),
+        firstName: "Questionable",
+        lastName: "Manatee",
+        dateOfBirth: new Date(1986, 9, 30),
         ssn: "563-68-7015",
         id: 3,
     },
@@ -52,4 +52,49 @@ export const repository: {member: IMemberDto, preapprovals: (IPreapprovalOfferDt
         termMonths: 48,
         status: PreapprovalStatus.Pending
     }]
+}, {
+    member: {
+        firstName: "Excitable",
+        lastName: "Llama",
+        dateOfBirth: new Date(1926, 6, 2),
+        ssn: "876-34-5685",
+        id: 4,
+    },
+    preapprovals: []
+}, {
+    member: {
+        firstName: "Consequential",
+        lastName: "Marmoset",
+        dateOfBirth: new Date(1956, 5, 9),
+        ssn: "574-95-3587",
+        id: 5,
+    },
+    preapprovals: []
+}, {
+    member: {
+        firstName: "Stinky",
+        lastName: "Unicorn",
+        dateOfBirth: new Date(2000, 1, 2),
+        ssn: "987-45-0165",
+        id: 6,
+    },
+    preapprovals: []
+}, {
+    member: {
+        firstName: "Immaculate",
+        lastName: "Turtle",
+        dateOfBirth: new Date(1939, 9, 8),
+        ssn: "234-87-2847",
+        id: 7,
+    },
+    preapprovals: []
+}, {
+    member: {
+        firstName: "Clandestine",
+        lastName: "Salamander",
+        dateOfBirth: new Date(1993, 2, 1),
+        ssn: "567-29-3658",
+        id: 8,
+    },
+    preapprovals: []
 }];

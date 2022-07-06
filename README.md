@@ -1,5 +1,5 @@
 # FeTechChallenge
-Hi!  Welcome to the WSECU Front End Tech Challenge.  This challenge is intended to test your user interface development skills using a pre-bootstrapped single page application.
+Hi!  Welcome to the Front End Tech Challenge.  This challenge is intended to test your user interface development skills using a pre-bootstrapped single page application.
 
 You may perform the challenge using the following UI frameworks:
 - Angular
