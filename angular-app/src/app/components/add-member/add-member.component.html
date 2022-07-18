@@ -1,0 +1,46 @@
+<form *ngIf="showAddMember" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="firstName">First Name *</label>
+    <input
+      type="text"
+      name="firstName"
+      [(ngModel)]="firstName"
+      id="firstName"
+      placeholder="First Name"
+      required
+    />
+  </div>
+  <div class="form-control">
+    <label for="lastName">Last Name *</label>
+    <input
+      type="text"
+      name="lastName"
+      [(ngModel)]="lastName"
+      id="lastName"
+      placeholder="Last Name"
+      required
+    />
+  </div>
+  <div class="form-control">
+    <label for="ssn">SSN</label>
+    <input
+      type="text"
+      name="ssn"
+      [(ngModel)]="ssn"
+      id="ssn"
+      placeholder="555-55-5555"
+    />
+  </div>
+  <div class="form-control">
+    <label for="dateOfBirth">Date of Birth</label>
+    <input
+      type="date"
+      name="dateOfBirth"
+      [(ngModel)]="dateOfBirth"
+      id="day"
+      placeholder="Date of Birth"
+    />
+  </div>
+  <input type="submit" value="Save Member" class="btn btn-block" />
+
+</form>
