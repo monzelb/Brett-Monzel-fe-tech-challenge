@@ -15,10 +15,10 @@ export class StubMemberApiService implements IMemberApiService {
      */
     getCollection(): Observable<IMemberDto[]> {
         let ret = repository.map(x => x.member);
-        
+
         return of(ret);
     }
-    
+
     /**
      * Gets a member with the provided id from the "API"
      * @param id - The id of the member to get
@@ -27,9 +27,9 @@ export class StubMemberApiService implements IMemberApiService {
     get(id: number): Observable<IMemberDto | undefined> {
         let ret = repository.map(x => x.member)
             .find(x => x.id === id)
-        
+
         if (!ret) throw new Error("Member does not exist.");
-        
+
         return of(ret);
     }
 
@@ -38,15 +38,21 @@ export class StubMemberApiService implements IMemberApiService {
      * @param member - The new member to enroll in our credit union
      * @returns The newly created member
      */
-    create(member: IMemberDto): Observable<IMemberDto> { 
+    create(member: IMemberDto): Observable<IMemberDto> {
+        const maxId = repository.reduce(
+            (max: any, character: any) => (character.member.id > max ? character.member.id : max),
+            repository[0].member.id
+          );
+        member.id = maxId + 1;
+
         repository.push({
             member,
             preapprovals: []
         })
-        
+
         return of(member);
     }
-    
+
     /**
      * Updates an existing member's information
      * @param member - The updated member
@@ -55,12 +61,12 @@ export class StubMemberApiService implements IMemberApiService {
     update(member: IMemberDto): Observable<IMemberDto> {
         let toUpdate = repository.find(x => x.member.id == member.id);
         if (!toUpdate) throw new Error("Member does not exist.");
-        
+
         Object.assign(toUpdate, member);
-        
+
         return of(member);
     }
-    
+
     /**
      * Removes a member from our credit union. 😢
      * @param id - The id of the member to remove

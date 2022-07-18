@@ -1,0 +1,6 @@
+<app-add-member (onAddMember)="addMember($event)"></app-add-member>
+<app-member
+  *ngFor="let member of members"
+  [member]="member"
+  (onDeleteMember)="deleteMember(member)">
+</app-member>

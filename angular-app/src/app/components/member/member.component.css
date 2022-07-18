@@ -1,0 +1,21 @@
+.member {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+}
+
+.member.reminder {
+  border-left: 5px solid green;
+}
+
+.member h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #40428b;
+}
+
+.member fa-icon {
+  cursor: pointer;
+}

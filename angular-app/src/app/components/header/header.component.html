@@ -1,0 +1,8 @@
+<header>
+  <h1>{{ title }}</h1>
+  <app-button
+    color="{{ showAddMember ? 'red' : '#007d6f' }}"
+    text="{{ showAddMember ? 'Close' : 'Add Member' }}"
+    (click)="toggleAddMember()">
+  </app-button>
+</header>
